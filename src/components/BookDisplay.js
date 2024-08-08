@@ -9,7 +9,7 @@ function BookDisplay(){
         <div className="display">
             {  books.length ? books.map((book) => {
                 return <Book key={book.id} id={book.id} title={book.title}/>
-            }) : <p className="display-text">Please add a book below</p>}
+            }) : <p className="display__text">Please add a book below</p>}
         </div>
     )
 }

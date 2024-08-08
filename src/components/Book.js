@@ -37,12 +37,12 @@ function Book({title, id}){
 
     return(
         <div className="book">
-            <div onClick={handleDeleteBook} className="book-delete">&#9747;</div>
-            <div onClick={handleShowEdit} className="book-edit">&#9998;</div>
-            <div className="book-image"></div>
+            <div onClick={handleDeleteBook} className="book__delete">&#9747;</div>
+            <div onClick={handleShowEdit} className="book__edit">&#9998;</div>
+            <div className="book__image"></div>
             {showEdit ? <form onSubmit={handleSubmitTitle}>
-                            <input autoFocus value={newTitle} onChange={handleEditTitle} className="book-input"/>
-                        </form> : <p className="book-title">{title}</p>}
+                            <input autoFocus value={newTitle} onChange={handleEditTitle} className="book__input"/>
+                        </form> : <p className="book__title">{title}</p>}
         </div>
     )
 }
