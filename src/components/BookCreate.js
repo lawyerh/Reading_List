@@ -23,7 +23,7 @@ function BookCreate(){
             <h2 className="create__heading">Enter a book title to</h2>
             <form onSubmit={handleSubmit} className="create__form">
                 <input value={query} onChange={handleChange} className="create__input" />
-                <button className="create__button">
+                <button className="btn create__button">
                     Add Book
                 </button>
             </form>

@@ -1,20 +1,19 @@
 {
   "books": [
     {
-      "title": "Harry Potter",
-      "id": 1
-    },
-    {
       "title": "Eragon",
-      "id": 2
-    },
-    {
-      "title": "The Dark Tower",
-      "id": 3
-    },
-    {
-      "title": "Jurassic Park",
-      "id": 4
+      "authors": [
+        "Christopher Paolini"
+      ],
+      "publisher": "Knopf Books for Young Readers",
+      "publishedDate": "2013",
+      "description": "In Aagaesia, a fifteen-year-old boy of unknown lineage called Eragon finds a mysterious stone that weaves his life into an intricate tapestry of destiny, magic, and power, peopled with dragons, elves, and monsters.",
+      "pageCount": 536,
+      "cagetories": [
+        "Dragons"
+      ],
+      "image": "http://books.google.com/books/content?id=iVCNDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "id": 1
     }
   ]
 }

@@ -53,6 +53,21 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+.btn {
+  padding: 0.2em 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.1s;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border-radius: 0.2rem;
+  background-color: #282828;
+  color: #f7f7f7;
+}
+.btn:active {
+  transform: translateY(-2px);
+}
+
 .App {
   position: relative;
   height: 100vh;
@@ -93,20 +108,9 @@ p, h1, h2, h3, h4, h5, h6 {
   transform: scale(1.05);
 }
 .create__button {
-  background-color: lightcyan;
-  padding: 0.5rem;
   width: 50%;
   display: block;
   margin: 0 auto;
-  border-radius: 0.5rem;
-  border: none;
-  cursor: pointer;
-  transition: all 0.1s;
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-.create__button:active {
-  transform: translateY(-2px);
 }
 
 .display {
@@ -158,6 +162,73 @@ p, h1, h2, h3, h4, h5, h6 {
   height: 50%;
   width: 50%;
   background-color: crimson;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  padding-bottom: 2rem;
+  height: 80%;
+  width: 80%;
+  background-color: cornflowerblue;
+  border: 1px solid black;
+  box-shadow: 0 0.1rem 1rem black;
+  border-radius: 0.5rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.search__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin-bottom: 0.5rem;
+}
+.search__text {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.search__results-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #282828;
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.result {
+  padding: 1rem;
+  flex-basis: 18%;
+  height: 20rem;
+  background-color: #f7f7f7;
+  margin: 0.7rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+.result__selected {
+  border: 5px solid cornflowerblue;
+}
+.result__image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 70%;
+  max-height: 80%;
+}
+.result__title {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=App.css.map */

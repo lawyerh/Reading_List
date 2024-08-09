@@ -42,21 +42,9 @@
     }
 
     &__button {
-        background-color:lightcyan;
-        padding: .5rem;
         width: 50%;
         display: block;
         margin: 0 auto;
-        border-radius: .5rem;
-        border: none;
-        cursor: pointer;
-        transition: all .1s;
-        font-weight: bold;
-        font-size: 1.5rem;
-
-        &:active {
-            transform: translateY(-2px);
-        }
     }
 
 }
@@ -119,6 +107,91 @@
         height: 50%;
         width: 50%;
         background-color: crimson;
+    }
+}
+
+// Search and result components
+
+.search {
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    padding-bottom: 2rem;
+
+    height: 80%;
+    width: 80%;
+    background-color: $primary-blue-dark;
+    border: $border;
+    box-shadow: 0 .1rem 1rem black;
+    border-radius: .5rem;
+    
+    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin-bottom: .5rem;
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        font-weight: bold;
+
+    }
+
+    &__results-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items:center;
+        background-color: $primary-grey-dark;
+        width: 90%;
+        margin: 0 auto;
+        overflow: hidden;
+        overflow-y: auto; // makes div scrollable
+        padding: 1rem
+    }
+    
+
+    
+}
+
+
+.result {
+    padding: 1rem;
+    flex-basis: 18%;
+    height: 20rem;
+    background-color: $primary-grey;
+    margin: .7rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px;
+
+    &__selected {
+        border: 5px solid $primary-blue-dark;
+    }
+
+    &__image {
+        background-size: cover;
+        background-repeat: no-repeat;
+        max-width: 70%;
+        max-height: 80%;
+        
+    }
+
+    &__title {
+        font-size: 1.2rem;
+        font-weight: bold;
     }
 }
 

@@ -2,5 +2,22 @@ $primary-red: firebrick;
 $primary-blue-light: cadetblue;
 $primary-blue-dark: cornflowerblue;
 $primary-grey: #f7f7f7;
+$primary-grey-dark: #282828;
 $primary-beige: bisque;
 $border : 1px solid black;
+
+.btn {
+    padding: .2em 1rem;
+    border: none;
+    cursor: pointer;
+    transition: all .1s;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-radius: .2rem;
+    background-color: $primary-grey-dark;
+    color: $primary-grey;
+
+        &:active {
+            transform: translateY(-2px);
+        }
+}

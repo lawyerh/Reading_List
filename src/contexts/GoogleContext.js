@@ -8,7 +8,7 @@ const GoogleContext = createContext()
 function GoogleBooksProvider({children}) {
     const [query, setQuery] = useState([])
 
-    const api = `${process.env.REACT_APP_GOOGLE_API_BASE}`
+    const api = `${process.env.REACT_APP_GOOGLE_API_BASE}`;
 
     const bookSearchByTitle = async (term) => {
         // replaces empty spaces with + 
@@ -19,7 +19,6 @@ function GoogleBooksProvider({children}) {
                 Authorization: `${process.env.REACT_APP_GOOGLE_API_KEY}`
             }
         })
-        console.log(response);
 
         setQuery(response.data.items)
     }

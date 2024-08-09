@@ -16,10 +16,17 @@ function Provider({children}) {
         setBooks(response.data);
     }
 
-    const newBook = async (bookTitle) => {
+    const newBook = async (book) => {
 
         const response = await axios.post(api, {
-            title: bookTitle
+            title: book.title,
+            authors: book.authors,
+            publisher: book.publisher,
+            publishedDate: book.publishedDate,
+            description: book.description,
+            pageCount: book.pageCount,
+            cagetories: book.categories,
+            image: book.imageLinks.thumbnail
         })
 
         setBooks([
