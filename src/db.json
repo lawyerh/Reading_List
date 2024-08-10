@@ -14,6 +14,22 @@
       ],
       "image": "http://books.google.com/books/content?id=iVCNDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "id": 1
+    },
+    {
+      "title": "Fantastic Beasts and where to Find Them",
+      "authors": [
+        "J. K. Rowling",
+        "Newt Scamander"
+      ],
+      "publisher": "Bloomsbury Children's Books",
+      "publishedDate": "2017",
+      "description": "A brand new edition of this essential companion to the Harry Potter stories, with a new foreword from J.K. Rowling, an irresistible new jacket by Jonny Duddle, illustrations by Tomislav Tomic and six new beasts! An approved textbook at Hogwarts School of Witchcraft and Wizardry since publication, Newt Scamander's masterpiece has entertained wizarding families through the generations. Fantastic Beasts and Where to Find Them is an indispensable introduction to the magical beasts of the Wizarding World. In this comprehensively updated edition, eagle-eyed readers will spot a number of new beasts and an intriguing new author's note. Scamander's years of travel and research have created a tome of unparalleled importance. Some of the beasts will be familiar to readers of the Harry Potter books - the Hippogriff, the Basilisk, the Hungarian Horntail ... Others will surprise even the most ardent amateur Magizoologist. Dip in to discover the curious habits of magical beasts across five continents ... 'No wizarding household is complete without a copy' - Albus Dumbledore",
+      "pageCount": 0,
+      "cagetories": [
+        "Juvenile Fiction"
+      ],
+      "image": "http://books.google.com/books/content?id=pmOsDAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "id": 2
     }
   ]
 }

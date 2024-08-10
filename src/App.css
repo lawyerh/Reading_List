@@ -71,6 +71,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .App {
   position: relative;
   height: 100vh;
+  overflow: hidden;
 }
 
 .header {
@@ -84,39 +85,41 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .create {
   position: absolute;
-  bottom: 0;
-  padding: 2rem;
+  bottom: -5.5rem;
+  padding: 1rem 2rem;
   background-color: cornflowerblue;
   width: 100%;
   border-top: 1px solid black;
+  transition: all 0.2s;
+}
+.create__active {
+  bottom: 0;
+}
+.create__heading {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
 }
 .create__form {
   display: flex;
-  flex-direction: column;
-  width: 30%;
+  justify-content: space-between;
+  align-items: center;
 }
 .create__input {
   font-size: 1.6rem;
   padding: 1rem;
   background-color: #f7f7f7;
   border: none;
-  margin-bottom: 1rem;
   transition: transform 0.2s;
   border-radius: 0.5rem;
 }
 .create__input:focus {
   transform: scale(1.05);
 }
-.create__button {
-  width: 50%;
-  display: block;
-  margin: 0 auto;
-}
 
 .display {
   background-color: #f7f7f7;
   padding: 2rem;
-  height: 70%;
+  height: 85%;
   display: flex;
   justify-content: left;
   flex-wrap: wrap;
