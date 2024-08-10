@@ -1,4 +1,3 @@
-import Book from "./Book";
 import useBooksContext from "../hooks/useBooksContext";
 
 function BookDisplay(){
@@ -7,9 +6,7 @@ function BookDisplay(){
 
     return(
         <div className="display">
-            {  books.length ? books.map((book) => {
-                return <Book key={book.id} id={book.id} title={book.title}/>
-            }) : <p className="display__text">Please add a book below</p>}
+            
         </div>
     )
 }

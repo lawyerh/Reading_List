@@ -1,4 +1,5 @@
-import "./App.css"
+import "./App.css";
+import Library from "./components/Library";
 import BookDisplay from "./components/BookDisplay";
 import BookCreate from "./components/BookCreate";
 import Search from "./components/Search";
@@ -10,7 +11,10 @@ const {query} = useGoogleContext();
     return(
         <div className="App">
             <h1 className="header">Reading list</h1>
-            <BookDisplay />
+            <div className="library-container">
+                <Library />
+                <BookDisplay />
+            </div>
             <BookCreate />
             {query.length ? <Search /> : ""}
         </div>

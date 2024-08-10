@@ -116,13 +116,23 @@ p, h1, h2, h3, h4, h5, h6 {
   transform: scale(1.05);
 }
 
+.library-container {
+  display: flex;
+  height: 85%;
+}
+
+.library {
+  flex-basis: 15%;
+  border-right: 1px solid black;
+}
+
 .display {
   background-color: #f7f7f7;
   padding: 2rem;
-  height: 85%;
   display: flex;
   justify-content: left;
   flex-wrap: wrap;
+  flex-basis: 85%;
 }
 .display__text {
   font-size: 1.3rem;
@@ -132,39 +142,12 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .book {
   position: relative;
-  height: 15rem;
-  width: 15rem;
-  padding: 2rem;
-  background-color: cadetblue;
-  border-radius: 1rem;
+  width: 100%;
+  padding: 1rem 1rem;
+  background-color: #282828;
   color: #f7f7f7;
-  font-size: 1.3rem;
-  margin-right: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-wrap: wrap;
-}
-.book__delete {
-  position: absolute;
-  right: 5%;
-  top: 5%;
-  color: firebrick;
-  font-size: 1.6rem;
-  cursor: pointer;
-}
-.book__edit {
-  position: absolute;
-  right: 17%;
-  top: 5%;
-  color: firebrick;
-  font-size: 1.6rem;
-  cursor: pointer;
-}
-.book__image {
-  height: 50%;
-  width: 50%;
-  background-color: crimson;
+  font-size: 1.2rem;
+  border-bottom: 1px solid white;
 }
 
 .search {
