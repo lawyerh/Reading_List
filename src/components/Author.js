@@ -1,21 +1,32 @@
 import Book from "./Book";
+import useBooksContext from "../hooks/useBooksContext";
+import { useEffect } from "react";
 
 function Author({name, titles}){
+    const { books } = useBooksContext();
 
-    //Receive books this author has worked on
-    const mapBooks = () => {
-        return titles.map((title) => {
-            return <Book title={title}/>
-        })
+    const assignID = (title) => {
+        let targetBook = books.find(book => book.title === title);
+        return targetBook.id;
     }
+
+    const mapBooks = () => {
+        const preparedTitles = titles.map((title) => {
+            return <Book title={title} id={assignID(title)} key={assignID(title)}/>
+        })
+        return preparedTitles;
+    }
+
+    
 
     return(
         <div className="book">
             
             <p className="book__title">{name}</p>
-            {mapBooks()}
+            {books.length ? mapBooks() : ""}
         </div>
     )
 };
 
+// TODO: Get books correct ID from app state
 export default Author;
