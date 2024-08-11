@@ -27,5 +27,4 @@ function Author({name, titles}){
     )
 };
 
-// TODO: Get books correct ID from app state
 export default Author;

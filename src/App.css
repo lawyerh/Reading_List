@@ -164,18 +164,25 @@ p, h1, h2, h3, h4, h5, h6 {
   height: 3rem;
   margin-left: auto;
 }
+.display__progress-container {
+  margin: 4rem 0;
+}
+.display__progress-text {
+  font-size: 1.2rem;
+}
 .display__progress {
+  --progress: 0%;
+  overflow: hidden;
   position: relative;
   height: 1.5rem;
   width: 100%;
   background-color: #282828;
-  margin: 4rem 0;
   border-radius: 1rem;
 }
 .display__progress::after {
   content: "";
   background-color: cornflowerblue;
-  width: 50%;
+  width: var(--progress);
   height: 100%;
   position: absolute;
   border-radius: inherit;

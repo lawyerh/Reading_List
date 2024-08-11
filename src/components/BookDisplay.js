@@ -1,7 +1,9 @@
+import { useEffect, useState } from "react";
 import useBooksContext from "../hooks/useBooksContext";
 import defaultBookImage from "../img/book.jpeg"
 
 function BookDisplay(){
+    const [pageProgress, setPageProgress] = useState(1)
 
     const { books, updateTargetBook, targetBook, deleteBook  } = useBooksContext();
 
@@ -9,6 +11,21 @@ function BookDisplay(){
         deleteBook(targetBook.id)
         updateTargetBook(books[0].id)
     }
+
+    // Style object to change the progress bar width
+    const progressStyle = {
+        
+        "--progress": `${pageProgress}%`
+    }
+
+    const handleUpdateProgress = () => {
+        let percentage = (targetBook.progress / targetBook.pageCount) * 100;
+        setPageProgress(Math.ceil(percentage));
+    }
+
+    useEffect(() => {
+        handleUpdateProgress();
+    }, [targetBook]);
 
     if(targetBook.title){
         return(
@@ -24,7 +41,10 @@ function BookDisplay(){
                     </div>
                     <button onClick={handleDelete} className="btn display__delete">Delete Book</button>
                 </div>
-                <div className="display__progress"></div>
+                <div onLoad={handleUpdateProgress} className="display__progress-container">
+                    <p className="display__progress-text">{`${targetBook.progress} / ${targetBook.pageCount}  pages`}</p>
+                    <div className="display__progress" style={progressStyle}></div>
+                </div>
                 <div className="display__description">
                     {targetBook.description}
                 </div>

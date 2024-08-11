@@ -26,10 +26,10 @@ function Provider({children}) {
             publishedDate: book.publishedDate,
             description: book.description,
             pageCount: book.pageCount,
+            progress: 0,
             cagetories: book.categories,
             image: (book.imageLinks.thumbnail ? book.imageLinks.thumbnail : "default")
         })
-        // TODO some titles don't seem to have a thumbnail. Need to handle error
 
         setBooks([
             ...books,
@@ -82,7 +82,6 @@ function Provider({children}) {
     }, []) // adding a variable to this array would cause a rerender if that variable changes
 
     useEffect(() => {
-        console.log(targetBook);
     }, [targetBook])
     return (
             <BooksContext.Provider value={payload}>

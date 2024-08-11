@@ -105,18 +105,30 @@
         margin-left: auto;
     }
 
+    &__progress-container {
+        margin: 4rem 0;
+    }
+
+    &__progress-text {
+        font-size: 1.2rem;
+    }
+
     &__progress {
+        // Setting a variable that I can update with react
+        --progress:  0%;
+        overflow: hidden;
+
         position: relative;
         height: 1.5rem;
         width: 100%;
         background-color: $primary-grey-dark;
-        margin: 4rem 0;
+       
         border-radius: 1rem;
 
         &::after {
             content: "";
             background-color: $primary-blue-dark;
-            width: 50%;
+            width: var(--progress);
             height: 100%;
             position: absolute;
             border-radius: inherit;
