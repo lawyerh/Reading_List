@@ -5,6 +5,7 @@ const BooksContext = createContext();
 
 function Provider({children}) {
     const [books, setBooks] = useState([])
+    const [targetBook, setTargetBook] = useState({})
 
     // Don't want to type this over and over
     const api = "http://localhost:3001/books/";
@@ -28,6 +29,7 @@ function Provider({children}) {
             cagetories: book.categories,
             image: book.imageLinks.thumbnail
         })
+        // TODO some titles don't seem to have a thumbnail. Need to handle error
 
         setBooks([
             ...books,
@@ -58,20 +60,30 @@ function Provider({children}) {
         setBooks(books.filter((book) => book.id !== id))
     }
 
+    // Not a DB method. Used to communication which book to display expanded info in BookDisplay
+
+    const updateTargetBook = (id) => {
+        setTargetBook(books.find(book => book.id === id))
+    }
+
     const payload = {
         books,
+        targetBook,
         fetchBooks,
         newBook,
         editBook,
-        deleteBook
+        deleteBook,
+        updateTargetBook
     };
-    console.log(children)
 
     // Called after first render, never called again
     useEffect(() => {
         fetchBooks();
     }, []) // adding a variable to this array would cause a rerender if that variable changes
 
+    useEffect(() => {
+        console.log(targetBook);
+    }, [targetBook])
     return (
             <BooksContext.Provider value={payload}>
                 {children}

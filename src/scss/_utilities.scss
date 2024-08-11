@@ -21,3 +21,7 @@ $border : 1px solid black;
             transform: translateY(-2px);
         }
 }
+
+.selected {
+    border: 5px solid $primary-blue-dark;
+}

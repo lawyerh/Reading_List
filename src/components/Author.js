@@ -1,6 +1,5 @@
 import Book from "./Book";
 import useBooksContext from "../hooks/useBooksContext";
-import { useEffect } from "react";
 
 function Author({name, titles}){
     const { books } = useBooksContext();

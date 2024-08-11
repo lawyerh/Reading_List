@@ -16,21 +16,6 @@
       "id": 1
     },
     {
-      "title": "The Lord of the Rings: The Fellowship of the Ring, The Two Towers, The Return of the King",
-      "authors": [
-        "J. R. R. Tolkien"
-      ],
-      "publisher": "HarperCollins UK",
-      "publishedDate": "2009-04-20",
-      "description": "All three parts of the epic masterpiece The Lord of the Rings – The Fellowship of the Ring, The Two Towers & The Return of the King – available as one download, featuring the definitive edition of the text, hyperlinked footnotes and page references, and 3 maps including a detailed map of Middle-earth.",
-      "pageCount": 1227,
-      "cagetories": [
-        "Fiction"
-      ],
-      "image": "http://books.google.com/books/content?id=FKziXsnqLTEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "id": 2
-    },
-    {
       "title": "State of Fear",
       "authors": [
         "Michael Crichton"
@@ -46,34 +31,19 @@
       "id": 3
     },
     {
-      "title": "A Case of Need",
+      "title": "Clifford's Halloween",
       "authors": [
-        "Michael Crichton"
+        "Norman Bridwell"
       ],
-      "publisher": "Penguin",
-      "publishedDate": "2003-08-05",
-      "description": "#1 NEW YORK TIMES BESTSELLING AUTHOR MICHAEL CRICHTON’S EDGAR AWARD-WINNING NOVEL The author of cutting-edge bestsellers like Jurassic Park and The Andromeda Strain, Michael Crichton captivated millions of fans by skillfully blending medical and scientific fact with pulse-pounding fiction. Written shortly after Crichton completed his medical internship, A Case of Need depicts the ever-building pressure and pace of a large Boston medical center. Tensions flare—and explode—when a surgical operation tragically ends in death, raising countless questions. Was it accidental malpractice? A violation of the Hippocratic oath? Or cold-blooded murder? Supplemented with the author’s fascinating appendices on the ethics of modern medicine, A Case of Need is powerful, compelling, informative, and suspenseful—classic Crichton at his best.",
-      "pageCount": 417,
+      "publisher": "Scholastic Inc.",
+      "publishedDate": "2016-05-31",
+      "description": "Classic Clifford reissued!Out of all the holidays, Emily Elizabeth and Clifford like Halloween the most. They play games, trick-or-treat in the neighborhood, and tell ghost stories. Best of all, they can wear costumes! Clown, witch, knight, or ghost--what will Clifford decide to dress up as this year?",
+      "pageCount": 36,
       "cagetories": [
-        "Fiction"
+        "Juvenile Fiction"
       ],
-      "image": "http://books.google.com/books/content?id=bh99EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "image": "http://books.google.com/books/content?id=47mgCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "id": 4
-    },
-    {
-      "title": "J.R.R. Tolkien",
-      "authors": [
-        "Richard Purtill"
-      ],
-      "publisher": "Ignatius Press",
-      "publishedDate": "2011-05-02",
-      "description": "Here is an in-depth look at the role myth, morality, and religion play in J.R.R. Tolkien's works such as The Hobbit, The Lord of the Rings, and The Silmarillion-including Tolkien's private letters and revealing opinions of his own work. Richard L. Purtill brilliantly argues that Tolkien's extraordinary ability to touch his readers' lives through his storytelling-so unlike much modern literature-accounts for his enormous literary success. This book demonstrates the moral depth in Tolkien's work and cuts through current subjectivism and cynicism about morality. A careful reader will find a subtle religious dimension to Tolkien's work-all the more potent because it is below the surface. Purtill reveals that Tolkien's fantasy stories creatively incorporate profound religious and ethical ideas. For example, Purtill shows us how hobbits reflect both the pettiness of parochial humanity and unexpected heroism. Purtill, author of 19 books, effectively addresses larger issues of the place of myth, the relation of religion and morality to literature, the relation of Tolkien's work to traditional mythology, and the lessons Tolkien's work teaches for our own lives.",
-      "pageCount": 228,
-      "cagetories": [
-        "Literary Criticism"
-      ],
-      "image": "http://books.google.com/books/content?id=D4hHDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "id": 5
     }
   ]
 }

@@ -19,7 +19,7 @@ function GoogleBooksProvider({children}) {
                 Authorization: `${process.env.REACT_APP_GOOGLE_API_KEY}`
             }
         })
-
+        console.log(response.data)
         setQuery(response.data.items)
     }
 
@@ -44,3 +44,5 @@ function GoogleBooksProvider({children}) {
 }
 
 export {GoogleContext, GoogleBooksProvider};
+
+

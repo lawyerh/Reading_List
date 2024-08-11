@@ -4,8 +4,8 @@ function SearchResult ({book, selected, onSelect}){
         onSelect(book.id)
     }
     return (
-        <div onClick={handleSelect} className={`result ${selected ? "result__selected" : ""}`}>
-            <img src={book.volumeInfo.imageLinks.thumbnail}  className="result__image"/>
+        <div onClick={handleSelect} className={`result ${selected ? "selected" : ""}`}>
+            <img src={book.volumeInfo.imageLinks.thumbnail} alt={book.volumeInfo.title}  className="result__image"/>
             <p className="result__title">{book.volumeInfo.title}</p>
         </div>
     )

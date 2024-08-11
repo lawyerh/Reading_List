@@ -68,6 +68,10 @@ p, h1, h2, h3, h4, h5, h6 {
   transform: translateY(-2px);
 }
 
+.selected {
+  border: 5px solid cornflowerblue;
+}
+
 .App {
   position: relative;
   height: 100vh;
@@ -124,20 +128,49 @@ p, h1, h2, h3, h4, h5, h6 {
 .library {
   flex-basis: 15%;
   border-right: 1px solid black;
+  height: 85%;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .display {
   background-color: #f7f7f7;
   padding: 2rem;
-  display: flex;
-  justify-content: left;
-  flex-wrap: wrap;
   flex-basis: 85%;
 }
-.display__text {
-  font-size: 1.3rem;
+.display__overview {
+  display: flex;
+}
+.display__photo {
+  height: 15rem;
+  width: auto;
+  margin-right: 1rem;
+}
+.display__title-container {
+  flex-basis: 50%;
+}
+.display__title {
+  font-size: 2rem;
   font-weight: bold;
-  justify-self: unset;
+  margin-bottom: 0.5rem;
+}
+.display__author {
+  font-size: 1.3rem;
+}
+.display__publisher {
+  font-size: 1rem;
+}
+.display__delete {
+  height: 3rem;
+  margin-left: auto;
+}
+.display__progress {
+  height: 5rem;
+  width: 100%;
+  background-color: cadetblue;
+}
+.display__description {
+  font-size: 1.4rem;
 }
 
 .book {
@@ -148,6 +181,7 @@ p, h1, h2, h3, h4, h5, h6 {
   color: #f7f7f7;
   font-size: 1.2rem;
   border-bottom: 1px solid white;
+  cursor: pointer;
 }
 
 .search {
@@ -202,9 +236,6 @@ p, h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   justify-content: space-between;
   border-radius: 5px;
-}
-.result__selected {
-  border: 5px solid cornflowerblue;
 }
 .result__image {
   background-size: cover;
