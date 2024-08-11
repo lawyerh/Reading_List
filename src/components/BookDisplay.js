@@ -1,4 +1,5 @@
 import useBooksContext from "../hooks/useBooksContext";
+import defaultBookImage from "../img/book.jpeg"
 
 function BookDisplay(){
 
@@ -14,7 +15,8 @@ function BookDisplay(){
             
             <div className="display">
                 <div className="display__overview">
-                    <img src={targetBook.image} alt={`Cover art for ${targetBook.title}`} className="display__photo"/>
+                    {/* If .image is saved as default, google books did not have cover art and we display a default */}
+                    <img src={targetBook.image === "default" ? defaultBookImage : targetBook.image} alt={`Cover art for ${targetBook.title}`} className="display__photo"/>
                     <div className="display__title-container">
                         <p className="display__title">{targetBook.title}</p>
                         <p className="display__author">{targetBook.authors[0]}</p>

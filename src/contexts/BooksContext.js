@@ -27,7 +27,7 @@ function Provider({children}) {
             description: book.description,
             pageCount: book.pageCount,
             cagetories: book.categories,
-            image: book.imageLinks.thumbnail
+            image: (book.imageLinks.thumbnail ? book.imageLinks.thumbnail : "default")
         })
         // TODO some titles don't seem to have a thumbnail. Need to handle error
 

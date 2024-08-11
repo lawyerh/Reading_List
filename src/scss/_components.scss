@@ -106,9 +106,21 @@
     }
 
     &__progress {
-        height: 5rem;
+        position: relative;
+        height: 1.5rem;
         width: 100%;
-        background-color: $primary-blue-light;
+        background-color: $primary-grey-dark;
+        margin: 4rem 0;
+        border-radius: 1rem;
+
+        &::after {
+            content: "";
+            background-color: $primary-blue-dark;
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            border-radius: inherit;
+        }
     }
 
     &__description {
