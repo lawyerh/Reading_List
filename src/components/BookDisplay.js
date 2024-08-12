@@ -3,29 +3,51 @@ import useBooksContext from "../hooks/useBooksContext";
 import defaultBookImage from "../img/book.jpeg"
 
 function BookDisplay(){
-    const [pageProgress, setPageProgress] = useState(1)
+    const [pageProgress, setPageProgress] = useState(1);
+    const [newProgress, setNewProgress] = useState(0);
 
-    const { books, updateTargetBook, targetBook, deleteBook  } = useBooksContext();
+    const { books, 
+        targetBook, 
+        deleteBook, 
+        editBookProgressByID  } = useBooksContext();
 
+
+    // Delete book from Library
     const handleDelete = () => {
         deleteBook(targetBook.id)
-        updateTargetBook(books[0].id)
+        console.log(targetBook)
+        // updateTargetBook(books.length ? books[0].id : 0 )
     }
 
+    // LOGIC FOR PROGRESS BAR AND PAGE COUNT ***
     // Style object to change the progress bar width
     const progressStyle = {
         
         "--progress": `${pageProgress}%`
     }
 
-    const handleUpdateProgress = () => {
+    // Gets progress / pageCount as percentage and updates UI
+    const updatePageProgressBar = () => {
         let percentage = (targetBook.progress / targetBook.pageCount) * 100;
         setPageProgress(Math.ceil(percentage));
     }
 
+    // For submission of new page progress
+    const handleProgressSubmit = async (e) => {
+        e.preventDefault();
+        await editBookProgressByID(targetBook.id, newProgress);
+    }
+    
+    const handleProgressChange = (e) => {
+        setNewProgress(e.target.value);
+    }
+
+    // Makes sure progress bar and new page progress input have correct data
     useEffect(() => {
-        handleUpdateProgress();
+        updatePageProgressBar();
     }, [targetBook]);
+
+
 
     if(targetBook.title){
         return(
@@ -41,8 +63,12 @@ function BookDisplay(){
                     </div>
                     <button onClick={handleDelete} className="btn display__delete">Delete Book</button>
                 </div>
-                <div onLoad={handleUpdateProgress} className="display__progress-container">
+                <div className="display__progress-container">
                     <p className="display__progress-text">{`${targetBook.progress} / ${targetBook.pageCount}  pages`}</p>
+                    <form onSubmit={handleProgressSubmit} className="display__progress-form">
+                        <input value={newProgress} onChange={handleProgressChange} type="number" className="display__progress-input"/>
+                        <button>Submit Progress</button>
+                    </form>
                     <div className="display__progress" style={progressStyle}></div>
                 </div>
                 <div className="display__description">

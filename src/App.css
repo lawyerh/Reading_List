@@ -169,6 +169,9 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .display__progress-text {
   font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+  font-weight: bold;
 }
 .display__progress {
   --progress: 0%;

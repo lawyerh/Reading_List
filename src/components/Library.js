@@ -23,7 +23,7 @@ function Library() {
 
     return (
         <div className="library">
-            {mapAuthors()}
+            {books.length ? mapAuthors() : <p>Empty</p>}
         </div>
     )
 };

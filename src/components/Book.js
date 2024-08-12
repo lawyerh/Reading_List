@@ -9,7 +9,7 @@ function Book({title, id}){
     }
 
     return(
-        <div onClick={handleClick} className={`book ${targetBook.id === id ? "selected" : ""}`}>
+        <div onClick={handleClick} className={`book ${(targetBook && targetBook.id === id) ? "selected" : ""}`}>
             
             <p className="book__title ">{title}</p>
         </div>

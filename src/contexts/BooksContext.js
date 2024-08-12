@@ -5,7 +5,7 @@ const BooksContext = createContext();
 
 function Provider({children}) {
     const [books, setBooks] = useState([])
-    const [targetBook, setTargetBook] = useState({})
+    const [targetBook, setTargetBook] = useState(false)
 
     // Don't want to type this over and over
     const api = "http://localhost:3001/books/";
@@ -38,19 +38,24 @@ function Provider({children}) {
 
     }
 
-    const editBook = async (newTitle, id) => {
+    const editBookProgressByID = async (id, newProgress) => {
+        let newTargetBook = {...targetBook}
+        newTargetBook.progress = Number(newProgress);
     
-        const response = await axios.put(api + id.toString(), {
-            title: newTitle
+        const response = await axios.put(api + id.toString(), newTargetBook).then((response) => {
+            const newBooks = books.map((book) => {
+                if(book.id === id) {
+                    setTargetBook({...book});
+                    return {...book, ...response.data};
+                }
+                return book;
+            });
+            // console.log(newBooks);
+            setBooks(newBooks);
         });
 
-
-        const newBooks = books.map((book) => {
-            if(book.id === id) return {...book, ...response.data};
-            return book;
-        })
-
-        setBooks(newBooks)
+        
+        
         
     }
 
@@ -60,9 +65,13 @@ function Provider({children}) {
         setBooks(books.filter((book) => book.id !== id))
     }
 
-    // Not a DB method. Used to communication which book to display expanded info in BookDisplay
+    // Not a DB method. Used to communicate which book to display expanded info in BookDisplay
 
     const updateTargetBook = (id) => {
+        // let target = books.find(book => book.id === id)
+        // setTargetBook({...target});
+        if(!id) setTargetBook({})
+        console.log(books)
         setTargetBook(books.find(book => book.id === id))
     }
 
@@ -71,7 +80,7 @@ function Provider({children}) {
         targetBook,
         fetchBooks,
         newBook,
-        editBook,
+        editBookProgressByID,
         deleteBook,
         updateTargetBook
     };
@@ -82,7 +91,9 @@ function Provider({children}) {
     }, []) // adding a variable to this array would cause a rerender if that variable changes
 
     useEffect(() => {
-    }, [targetBook])
+        if(targetBook.id && books.length) updateTargetBook(targetBook.id)
+            else setTargetBook(false)
+    },[books])
     return (
             <BooksContext.Provider value={payload}>
                 {children}
