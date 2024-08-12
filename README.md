@@ -9,10 +9,8 @@ Quick setup:
 ### `npm i`
 ### `npm run dev`
 
-Uses npm-run-all to:
-Run the app in development mode on port 3000.
-Start the json server to serve data records on port 3001 by default.
-Watch for scss changes and automatically compile to css
+### Uses npm-run-all to:
+Run the app in development mode on port 3000. Start the json server to serve data records on port 3001 by default. Watch for scss changes and automatically compile to css.
 
 ### DESCRIPTION
 
