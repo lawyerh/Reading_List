@@ -1,7 +1,8 @@
 import { useState} from "react";
 import useBooksContext from "../hooks/useBooksContext";
 import useGoogleContext from "../hooks/useGoogleContext";
-
+// TODO handle empty request
+// TODO button open and close is not semantic
 function BookCreate(){
     // LOCAL STATE
     const [query, setQuery] = useState("");
@@ -24,7 +25,7 @@ function BookCreate(){
         setQuery('');
     }
     return(
-        // Input needs validation
+        // TODO Input needs validation
         <div className={`create${active ? " create__active" : ""}`}>
             <button onClick={handleClick} className="btn create__heading">Search Google Books</button>
             <form onSubmit={handleSubmit} className="create__form">

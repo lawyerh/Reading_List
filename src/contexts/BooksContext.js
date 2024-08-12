@@ -28,7 +28,7 @@ function Provider({children}) {
             pageCount: book.pageCount,
             progress: 0,
             cagetories: book.categories,
-            image: (book.imageLinks.thumbnail ? book.imageLinks.thumbnail : "default")
+            image: (book.imageLinks ? book.imageLinks.thumbnail : "default")
         })
 
         setBooks([
@@ -42,7 +42,7 @@ function Provider({children}) {
         let newTargetBook = {...targetBook}
         newTargetBook.progress = Number(newProgress);
     
-        const response = await axios.put(api + id.toString(), newTargetBook).then((response) => {
+        await axios.put(api + id.toString(), newTargetBook).then((response) => {
             const newBooks = books.map((book) => {
                 if(book.id === id) {
                     setTargetBook({...book});
@@ -63,6 +63,7 @@ function Provider({children}) {
         await axios.delete(api + id.toString())
 
         setBooks(books.filter((book) => book.id !== id))
+        updateTargetBook(false);
     }
 
     // Not a DB method. Used to communicate which book to display expanded info in BookDisplay
@@ -91,8 +92,9 @@ function Provider({children}) {
     }, []) // adding a variable to this array would cause a rerender if that variable changes
 
     useEffect(() => {
-        if(targetBook.id && books.length) updateTargetBook(targetBook.id)
+        if(targetBook && books.length) updateTargetBook(targetBook.id)
             else setTargetBook(false)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[books])
     return (
             <BooksContext.Provider value={payload}>

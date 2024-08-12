@@ -1,36 +1,44 @@
 {
   "books": [
     {
-      "title": "Chile",
+      "title": "\"Ces forces obscures de l’âme\"",
       "authors": [
-        "United States. Office of Geography"
+        "Christine Margerrison"
       ],
-      "publishedDate": "1967",
-      "pageCount": 622,
-      "progress": 22,
+      "publisher": "BRILL",
+      "publishedDate": "2008-01-01",
+      "description": "This is the first major investigation of Camus’s prose fiction to explore the developing presentation of women, from the author’s earliest writings to his last, unfinished novel. Avoiding the traditional relegation of this subject to an emotional or private sphere, it traces Camus’s intellectual development in order to demonstrate the centrality of this subject to Camus’s work as a whole. If the Absurd, constructed over the body of the “real” woman, liberates the writer to follow a “true path” of literary creation, the impending loss of his Algerian homeland impells a return to “all that he had not been free to choose”, the ties of blood. These conflictual and unresolved ties are here investigated, in conjunction with the presentation of mythical female figures expressing Camus’s darkest fears, partly voiced in other writings, concerning that “other” Algeria for which he would never fight. Exploring complex interconnections between sexuality, “race” and colonialism, this volume is pertinent to all who are interested in the writings of Camus, particularly those seeking relevant new ways of approaching his work.",
+      "pageCount": 356,
+      "progress": 56,
       "cagetories": [
-        "Chile"
+        "Social Science"
       ],
-      "image": "http://books.google.com/books/content?id=xa87AQAAMAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "image": "http://books.google.com/books/content?id=6P15DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "id": 1
     },
     {
-      "title": "The C Book, Featuring the ANSI C Standard",
-      "authors": [
-        "Mike Banahan",
-        "Declan Brady",
-        "Mark Doran"
-      ],
-      "publisher": "Addison-Wesley",
-      "publishedDate": "1991",
-      "description": "This book presents an introduction to the C programming language, featuring a structured approach and aimed at professionals and students with some experience of high-level languages. Features *includes embedded summary material in bulleted form *highlights common traps and pitfalls in C programming.",
-      "pageCount": 310,
+      "title": "In Re Antonio H.",
+      "publishedDate": "2000",
+      "pageCount": 6,
       "progress": 0,
       "cagetories": [
-        "Computers"
+        "Legal briefs"
       ],
-      "image": "http://books.google.com/books/content?id=XXdyQgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-      "id": 2
+      "image": "http://books.google.com/books/content?id=uJYvMo_iLS4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "id": 3
+    },
+    {
+      "title": "Peptide Solvation and H-bonds",
+      "publisher": "Elsevier",
+      "publishedDate": "2006-03-02",
+      "description": "Volume 72, Peptide Solvation and H-bonds, addresses the role of peptide backbone solvation in the energetics of protein folding. Particular attention is focused on modeling and computation. This volume will be of particular interest to biophysicists and structural biologists. Challenges the longstanding and basic assumptions of structural biology Discusses how to solve the problem of protein structure prediction Addresses the quantitation of the energetics of folding",
+      "pageCount": 313,
+      "progress": 0,
+      "cagetories": [
+        "Science"
+      ],
+      "image": "http://books.google.com/books/content?id=gX9oRcT9kSgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "id": 4
     }
   ]
 }

@@ -6,7 +6,7 @@ function BookDisplay(){
     const [pageProgress, setPageProgress] = useState(1);
     const [newProgress, setNewProgress] = useState(0);
 
-    const { books, 
+    const { 
         targetBook, 
         deleteBook, 
         editBookProgressByID  } = useBooksContext();
@@ -44,25 +44,27 @@ function BookDisplay(){
 
     // Makes sure progress bar and new page progress input have correct data
     useEffect(() => {
-        updatePageProgressBar();
+        if(targetBook) updatePageProgressBar();
+        // es lint was throwing a confusing warning about dependencies, this shuts it off for this effect
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [targetBook]);
 
-
-
-    if(targetBook.title){
+    if(targetBook && targetBook.title){
         return(
             
             <div className="display">
+
                 <div className="display__overview">
                     {/* If .image is saved as default, google books did not have cover art and we display a default */}
                     <img src={targetBook.image === "default" ? defaultBookImage : targetBook.image} alt={`Cover art for ${targetBook.title}`} className="display__photo"/>
                     <div className="display__title-container">
                         <p className="display__title">{targetBook.title}</p>
                         <p className="display__author">{targetBook.authors[0]}</p>
-                        <p className="display__publisher">{targetBook.publisher}</p>
+                        <p className="display__publisher"><span>Published by</span>{targetBook.publisher}</p>
                     </div>
                     <button onClick={handleDelete} className="btn display__delete">Delete Book</button>
                 </div>
+
                 <div className="display__progress-container">
                     <p className="display__progress-text">{`${targetBook.progress} / ${targetBook.pageCount}  pages`}</p>
                     <form onSubmit={handleProgressSubmit} className="display__progress-form">
@@ -71,6 +73,7 @@ function BookDisplay(){
                     </form>
                     <div className="display__progress" style={progressStyle}></div>
                 </div>
+
                 <div className="display__description">
                     {targetBook.description}
                 </div>

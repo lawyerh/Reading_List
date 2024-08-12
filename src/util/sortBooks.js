@@ -5,17 +5,22 @@ function sortBooksByAuthor(booksArr){
     }
     else {
         const authorsAndBooks = {};
+        
 
         for(let i = 0; i< booksArr.length; i++){
-            // If author's works are already present in Obj
-            if(authorsAndBooks[booksArr[i].authors[0]]){
-                // Push title into authors array
-                authorsAndBooks[booksArr[i].authors[0]].push(booksArr[i].title)
+            if(booksArr[i].authors){
+                // If author's works are already present in Obj
+                if(authorsAndBooks[booksArr[i].authors[0]]){
+                    // Push title into authors array
+                    authorsAndBooks[booksArr[i].authors[0]].push(booksArr[i].title)
+                }
+                else { // Else make the array
+                    authorsAndBooks[booksArr[i].authors[0]] = [booksArr[i].title]
+                }
+                // console.log(booksArr[i].authors[0])
+            } else {
+                booksArr.unknown = [...booksArr, booksArr[i].title]
             }
-            else { // Else make the array
-                authorsAndBooks[booksArr[i].authors[0]] = [booksArr[i].title]
-            }
-            // console.log(booksArr[i].authors[0])
         }
         // console.log(authorsAndBooks);
         return authorsAndBooks;
