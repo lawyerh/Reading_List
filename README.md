@@ -20,10 +20,20 @@ Reading list application from Stephen Grider's Udemy course on React/Redux.
 This project was the first "full stack" react application of the course, and targeted:
 
     - Prop communication from parent/child components
-    - Displaying "Book" components based on JSON data returned from a server
-    - Creating a simple development server for persitent data
+    - Displaying "Book" components based on JSON data returned from a local server
+    - Creating a simple local development server for persitent data
     - CRUD operations
     - Introduction into contexts and hooks
+
+I have modified this project to include:
+
+    - Data fetching from Google Books API
+    - A view of your library with books sorted by their author
+    - SCSS styling
+    - Input validations 
+    - Tracking of pages read including a progress bar
+
+The purpose of this project was to practice working on a more complex app rather than small coursework projects.
 
 ### `npm start`
 
