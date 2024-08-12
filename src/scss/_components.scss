@@ -16,7 +16,7 @@
 // Create book component
 .create {
     position:absolute;
-    bottom: -5.5rem;
+    bottom: -20%;
     padding: 1rem 2rem;
     background-color: $primary-blue-dark;
     width: 100%;
@@ -27,12 +27,30 @@
         bottom: 0
     }
 
+    &__open {
+        position: absolute;
+        right: 2%;
+        top: -50%;
+    }
+
+    &__closed {
+        position: absolute;
+        right: 2%;
+        top: 12%;
+    }
+
     &__heading {
         font-size: 1.6rem;
-        margin-bottom: 1rem;
+        font-weight: light;
+        margin-left: .8rem;
+        color: $primary-grey-dark;
+        border-bottom: $border;
+        display: inline;
+        text-decoration: underline;
     }
 
     &__form {
+        margin-top: 1rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -41,13 +59,14 @@
     &__input {
         font-size: 1.6rem;
         padding: 1rem;
+        margin-left: 1rem;
         background-color: #f7f7f7;
         border: none;
         transition: transform .2s;
         border-radius: .5rem;
 
         &:focus {
-            transform: scale(1.05);
+            transform: scale(1.02);
         }
     }
 
@@ -58,15 +77,49 @@
 .library-container {
     display: flex;
     
-    height: 85%;
+    height: 100%;
 }
 
 .library {
     flex-basis: 15%;
     border-right: $border;
-    height: 85%;
+    height: 100%;
     overflow: hidden;
     overflow-y: scroll;
+    background-color: $primary-grey-dark;
+    color: $primary-grey
+}
+
+// Author Component
+
+.author {
+    font-size: 1.1rem;
+    &:not(:first-of-type) {
+        margin-top: .5rem;
+    }
+    
+
+    &__title {
+        border-bottom: 1px solid $primary-grey;
+        margin-left: 5px;
+        font-weight: bold;
+    }
+}
+
+// Book component
+
+.book {
+    width: 100%;
+    padding: .5rem .5rem;
+    margin-left: 2px;
+    background-color: $primary-grey-dark;
+    color: #f7f7f7;
+    font-size: 1rem;
+    cursor: pointer;
+    box-sizing: border-box;
+    &:hover {
+        background-color: $primary-blue-dark;
+    }
 }
 
 // Display books component
@@ -99,29 +152,50 @@
     }
     &__publisher {
         font-size: 1rem;
+        line-height: .9;
+
+        & span {
+            margin-bottom: 0;
+        }
     }
     &__delete {
-        height: 3rem;
+        font-size: 1rem;
+        height: 2rem;
         margin-left: auto;
     }
 
     &__progress-container {
         margin: 4rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;;
     }
 
     &__progress-text {
         font-size: 1.2rem;
-        margin-bottom: .5rem;
         margin-left: 1rem;
         font-weight: bold;
     }
+
+    &__progress-form {  
+        margin-left: auto;
+        margin-right: 1rem;
+        font-size: 1.4rem;
+        }
+
+        &__progress-input {
+            width: 5rem;
+            margin-right: 1rem;
+            height: 100%;
+            font-size: 1.6rem;
+        }
 
     &__progress {
         // Setting a variable that I can update with react
         --progress:  0%;
         overflow: hidden;
-
         position: relative;
+        margin-top: 1rem;
         height: 1.5rem;
         width: 100%;
         background-color: $primary-grey-dark;
@@ -141,19 +215,6 @@
     &__description {
         font-size: 1.4rem;
     }
-}
-
-// Book component
-
-.book {
-    position: relative;
-    width: 100%;
-    padding: 1rem 1rem;
-    background-color: $primary-grey-dark;
-    color: #f7f7f7;
-    font-size: 1.2rem;
-    border-bottom: 1px solid white;
-    cursor: pointer;
 }
 
 // Search and result components
@@ -222,10 +283,6 @@
     flex-direction: column;
     justify-content: space-between;
     border-radius: 5px;
-
-    // &__selected {
-    //     border: 5px solid $primary-blue-dark;
-    // }
 
     &__image {
         background-size: cover;

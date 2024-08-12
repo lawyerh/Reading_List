@@ -17,16 +17,23 @@ $border : 1px solid black;
     cursor: pointer;
     transition: all .1s;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     border-radius: .2rem;
     background-color: $primary-grey-dark;
     color: $primary-grey;
+    transition: all .2s;
 
         &:active {
             transform: translateY(-2px);
         }
+
+    &-warn {
+        background-color: $primary-red;
+        font-weight: initial;
+    }
 }
 
 .selected {
-    border: 5px solid $primary-blue-dark;
+    background-color: $primary-blue-dark !important; 
+    color: $primary-grey;
 }

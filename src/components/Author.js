@@ -19,9 +19,9 @@ function Author({name, titles}){
     
 
     return(
-        <div className="book">
+        <div className="author">
             
-            <p className="book__title">{name}</p>
+            <p className="author__title">{name}</p>
             {books.length ? mapBooks() : ""}
         </div>
     )

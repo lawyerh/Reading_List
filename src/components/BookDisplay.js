@@ -60,16 +60,16 @@ function BookDisplay(){
                     <div className="display__title-container">
                         <p className="display__title">{targetBook.title}</p>
                         <p className="display__author">{targetBook.authors[0]}</p>
-                        <p className="display__publisher"><span>Published by</span>{targetBook.publisher}</p>
+                        <p className="display__publisher"><span>Published by <br /></span>{targetBook.publisher}</p>
                     </div>
-                    <button onClick={handleDelete} className="btn display__delete">Delete Book</button>
+                    <button onClick={handleDelete} className="btn btn-warn display__delete">Delete Book</button>
                 </div>
 
                 <div className="display__progress-container">
                     <p className="display__progress-text">{`${targetBook.progress} / ${targetBook.pageCount}  pages`}</p>
                     <form onSubmit={handleProgressSubmit} className="display__progress-form">
                         <input value={newProgress} onChange={handleProgressChange} type="number" className="display__progress-input"/>
-                        <button>Submit Progress</button>
+                        <button className="btn">Record Progress</button>
                     </form>
                     <div className="display__progress" style={progressStyle}></div>
                 </div>

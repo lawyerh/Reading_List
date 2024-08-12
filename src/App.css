@@ -59,17 +59,23 @@ p, h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   transition: all 0.1s;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   border-radius: 0.2rem;
   background-color: #282828;
   color: #f7f7f7;
+  transition: all 0.2s;
 }
 .btn:active {
   transform: translateY(-2px);
 }
+.btn-warn {
+  background-color: firebrick;
+  font-weight: initial;
+}
 
 .selected {
-  border: 5px solid cornflowerblue;
+  background-color: cornflowerblue !important;
+  color: #f7f7f7;
 }
 
 .App {
@@ -89,7 +95,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .create {
   position: absolute;
-  bottom: -5.5rem;
+  bottom: -20%;
   padding: 1rem 2rem;
   background-color: cornflowerblue;
   width: 100%;
@@ -99,11 +105,27 @@ p, h1, h2, h3, h4, h5, h6 {
 .create__active {
   bottom: 0;
 }
+.create__open {
+  position: absolute;
+  right: 2%;
+  top: -50%;
+}
+.create__closed {
+  position: absolute;
+  right: 2%;
+  top: 12%;
+}
 .create__heading {
   font-size: 1.6rem;
-  margin-bottom: 1rem;
+  font-weight: light;
+  margin-left: 0.8rem;
+  color: #282828;
+  border-bottom: 1px solid black;
+  display: inline;
+  text-decoration: underline;
 }
 .create__form {
+  margin-top: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -111,26 +133,55 @@ p, h1, h2, h3, h4, h5, h6 {
 .create__input {
   font-size: 1.6rem;
   padding: 1rem;
+  margin-left: 1rem;
   background-color: #f7f7f7;
   border: none;
   transition: transform 0.2s;
   border-radius: 0.5rem;
 }
 .create__input:focus {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .library-container {
   display: flex;
-  height: 85%;
+  height: 100%;
 }
 
 .library {
   flex-basis: 15%;
   border-right: 1px solid black;
-  height: 85%;
+  height: 100%;
   overflow: hidden;
   overflow-y: scroll;
+  background-color: #282828;
+  color: #f7f7f7;
+}
+
+.author {
+  font-size: 1.1rem;
+}
+.author:not(:first-of-type) {
+  margin-top: 0.5rem;
+}
+.author__title {
+  border-bottom: 1px solid #f7f7f7;
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.book {
+  width: 100%;
+  padding: 0.5rem 0.5rem;
+  margin-left: 2px;
+  background-color: #282828;
+  color: #f7f7f7;
+  font-size: 1rem;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.book:hover {
+  background-color: cornflowerblue;
 }
 
 .display {
@@ -159,24 +210,43 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .display__publisher {
   font-size: 1rem;
+  line-height: 0.9;
+}
+.display__publisher span {
+  margin-bottom: 0;
 }
 .display__delete {
-  height: 3rem;
+  font-size: 1rem;
+  height: 2rem;
   margin-left: auto;
 }
 .display__progress-container {
   margin: 4rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 .display__progress-text {
   font-size: 1.2rem;
-  margin-bottom: 0.5rem;
   margin-left: 1rem;
   font-weight: bold;
+}
+.display__progress-form {
+  margin-left: auto;
+  margin-right: 1rem;
+  font-size: 1.4rem;
+}
+.display__progress-input {
+  width: 5rem;
+  margin-right: 1rem;
+  height: 100%;
+  font-size: 1.6rem;
 }
 .display__progress {
   --progress: 0%;
   overflow: hidden;
   position: relative;
+  margin-top: 1rem;
   height: 1.5rem;
   width: 100%;
   background-color: #282828;
@@ -192,17 +262,6 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .display__description {
   font-size: 1.4rem;
-}
-
-.book {
-  position: relative;
-  width: 100%;
-  padding: 1rem 1rem;
-  background-color: #282828;
-  color: #f7f7f7;
-  font-size: 1.2rem;
-  border-bottom: 1px solid white;
-  cursor: pointer;
 }
 
 .search {
