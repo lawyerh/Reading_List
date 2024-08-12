@@ -263,6 +263,11 @@ p, h1, h2, h3, h4, h5, h6 {
 .display__description {
   font-size: 1.4rem;
 }
+.display__empty {
+  font-size: 1.6rem;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
 
 .search {
   display: flex;

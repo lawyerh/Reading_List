@@ -18,6 +18,7 @@
     },
     {
       "title": "In Re Antonio H.",
+      "authors":["unknown"],
       "publishedDate": "2000",
       "pageCount": 6,
       "progress": 0,
@@ -29,6 +30,7 @@
     },
     {
       "title": "Peptide Solvation and H-bonds",
+      "authors":["unknown"],
       "publisher": "Elsevier",
       "publishedDate": "2006-03-02",
       "description": "Volume 72, Peptide Solvation and H-bonds, addresses the role of peptide backbone solvation in the energetics of protein folding. Particular attention is focused on modeling and computation. This volume will be of particular interest to biophysicists and structural biologists. Challenges the longstanding and basic assumptions of structural biology Discusses how to solve the problem of protein structure prediction Addresses the quantitation of the energetics of folding",
@@ -101,22 +103,6 @@
       ],
       "image": "http://books.google.com/books/content?id=vg1fDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "id": 9
-    },
-    {
-      "title": "Welcome To Blues Clues",
-      "authors": [
-        "Angela C. Santomero"
-      ],
-      "publisher": "Simon Spotlight/Nickelodeon",
-      "publishedDate": "1999-11-01",
-      "description": "A lift-the-flap book with 53 flaps.",
-      "pageCount": 0,
-      "progress": 0,
-      "cagetories": [
-        "Juvenile Fiction"
-      ],
-      "image": "http://books.google.com/books/content?id=Z5sNAAAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-      "id": 10
     },
     {
       "title": "LOL Jokes: Cleveland",

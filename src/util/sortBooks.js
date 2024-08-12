@@ -19,12 +19,19 @@ function sortBooksByAuthor(booksArr){
                 }
                 // console.log(booksArr[i].authors[0])
             } else {
-                booksArr.unknown = [...booksArr, booksArr[i].title]
-            }
+                // If no author is given, add the title to a list of books with unknown authors
+                if(!authorsAndBooks.unknown) authorsAndBooks.unknown = [booksArr[i].title];
+                else authorsAndBooks.unknown.push(booksArr[i].title);         
+                } 
         }
-        // console.log(authorsAndBooks);
+        console.log(authorsAndBooks);
         return authorsAndBooks;
     }
+}
+
+//Expects object containing {authorsName: ["title1", "title2"...],}
+function sortAuthorsAlphabetically (AuthorsArr) {
+    
 }
 
 export {sortBooksByAuthor};
